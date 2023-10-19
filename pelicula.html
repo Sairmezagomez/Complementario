@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./pelicula.css" />
+</head>
+
+
+<body>
+
+  <div class="container_general">
+  <div class="container-registro">
+    <h2>FORMULARIO DE REGISTRO DE PELICULAS</h2>
+
+    <form name="form" method="get" action="">
+
+      <div class="nombre_pelicula">
+        <label for="nombre">Titulo</label>
+        <input type="text" name="nombre" id="nombre" value="" placeholder="Ingrese el Titulo de la Pelicula" />
+      </div>
+
+      <div class="duracion">
+        <label for="duracion">Duracion en minutos</label>
+        <input type="number" name="duracion" id="duracion" value="" placeholder="Ingrese la duracion de la Pelicula" />
+      </div>
+
+      <div class="origen">
+        <label for="origen">Pais de Origen</label>
+        <input type="text" name="origen" id="origen" value="" placeholder="Ingrese el origen de la Pelicula" />
+      </div>
+
+      <div class="director">
+        <label for="director">Director</label>
+        <input type="text" name="director" id="director" value="" placeholder="Ingrese el nombre del Director" />
+      </div>
+
+      <div class="elenco">
+        <label for="elenco">Elenco</label>
+        <input type="text" name="elenco" id="elenco" value=""
+          placeholder="Ingrese el Elenco de la Pelicula" />
+      </div>
+
+      <input type="button" value="REGISTRAR" onClick="prueba(this.form)" class="registrar" />
+    </form>
+
+  </div>
+
+
+  <div class="anterior-posterior">
+
+    <div class="ir_a_protagonista">
+      <a href="http://127.0.0.1:5500/protagonista.html" target="_blank">IR  AL  REGISTRO  DE  PROTAGONISTAS</a>
+    </div>
+
+    <div class="ir_a_director">
+      <a href="http://127.0.0.1:5500/director.html" target="_blank">IR AL REGISTRO DE DIRECTORES</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+  <script type="text/javascript">
+
+    const arreglo = [];
+
+    class Pelicula {
+      constructor({
+        nombre,
+        duracion,
+        origen,
+        director,
+        elenco = [],
+      }) 
+
+      {
+        this.nombre = nombre;
+        this.duracion = duracion;
+        this.origen = origen,
+          this.director = director;
+        this.elenco = elenco;
+      }
+
+    }
+
+
+
+    function prueba(form) {
+      var nombrePelicula = form.nombre.value;
+      var duracionPelicula = form.duracion.value;
+      var paisDeOrigen = form.origen.value;
+      var nombreDirector = form.director.value;
+      var elenco = form.elenco.value;
+
+      /* console.log("Nombre de la Pelicula: " + nombrePelicula); 
+      console.log("Duracioón de la Pelicula: " + duracionPelicula);
+      console.log("Pais de Origen: " + paisDeOrigen);
+      console.log("Nombre del Director: " + nombreDirector);
+      console.log("Elenco: " + elenco);
+ */
+
+
+
+      const obj = new Pelicula({ nombre: nombrePelicula, duracion: duracionPelicula, origen: paisDeOrigen, director: nombreDirector, elenco: elenco });
+
+
+
+
+
+      arreglo.push(obj);
+
+      console.log(arreglo);
+
+
+      form.reset();
+
+    }
+
+
+
+  </script>
+  <!-- <script src="./index.js" type=""></script> -->
+
+</body>
+
+</html>

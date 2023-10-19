@@ -1,0 +1,133 @@
+body {
+    background-image: url(./1366_2000\ sinsajo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1200px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+
+}
+
+
+.container_general{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.container-registro {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    height: 650px;
+    margin-top: 30px;
+    margin-left: 70px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px gray;
+    
+}
+
+
+
+.nombre_director {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.nacionalidad {
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+
+.premios {
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+
+.cantidad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+
+
+input {
+    margin: 12px;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 102, 0);
+    background-color: gold;
+
+}
+
+
+
+
+.registrar {
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+.anterior-posterior{
+    margin-top: 90px;
+    margin-left: 70px;
+    
+}
+
+
+
+a{
+    color: gold;
+}
+
+
+.ir_a_protagonista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px gray;
+    border-radius: 10px;
+    width: 400px;
+    height: 30px;
+    background-color: black; 
+   
+ }
+
+
+ .ir_a_registro_peliculas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px gray;
+    border-radius: 10px;
+    width: 400px;
+    height: 30px;
+    background-color: black; 
+    margin-top: 50px; 
+
+ }

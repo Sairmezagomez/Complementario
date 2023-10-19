@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./director.css" />
+</head>
+
+
+<body>
+
+  <div class="container_general">
+    
+    <div class="container-registro">
+      <h2>FORMULARIO DE REGISTRO DE DIRECTORES</h2>
+
+      <form name="form" method="get" action="">
+
+        <div class="nombre_director">
+          <label for="nombre">Nombre del Director</label>
+          <input type="text" name="nombre" id="nombre" value="" placeholder="Ingrese el Nombre del Director" />
+        </div>
+
+        <div class="nacionalidad">
+          <label for="nacionalidad">Nacionalidad</label>
+          <input type="text" name="nacionalidad" id="nacionalidad" value="" placeholder="Ingrese la Nacionalidad" />
+        </div>
+
+        <div class="premios">
+          <label for="premios">Ingrese los premios recibidos</label>
+          <input type="text" name="premios" id="premios" value="" placeholder="Ingrese el nombre del Premio" />
+        </div>
+
+        <div class="cantidad">
+          <label for="cantidad_de_premios">Cantidad de Premios Recibidos</label>
+          <input type="number" name="cantidad" id="cantidad" value="" placeholder="Ingrese la cantidad de premios" />
+        </div>
+
+        <input type="button" value="REGISTRAR" onClick="prueba(this.form)" class="registrar" />
+      </form>
+
+    </div>
+    <div class="anterior-posterior">
+
+      <div class="ir_a_protagonista">
+        <a href="http://127.0.0.1:5500/protagonista.html" target="_blank">IR AL REGISTRO DE PROTAGONISTAS</a>
+      </div>
+
+      <div class="ir_a_registro_peliculas">
+        <a href="http://127.0.0.1:5500/pelicula.html" target="_blank">IR AL REGISTRO DE PELICULAS</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+
+    const arreglo = [];
+
+    class Director {
+      constructor({
+        nombre,
+        nacionalidad,
+        premios,
+        cantidad,
+      }) {
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        this.premios = premios;
+        this.cantidad = cantidad;
+      }
+    }
+
+    function prueba(form) {
+      var nombre_del_Director = form.nombre.value;
+      var nacionalidad_del_Director = form.nacionalidad.value;
+      var premios_Obtenidos = form.premios.value;
+      var cantidad_De_Premios = form.cantidad.value;
+
+      /* console.log("Nombre del Director: " + nombre_del_Director); 
+      console.log("Nacionalidad: " + nacionalidad_del_Director);
+      console.log("Nombre del Premio: " + premios_Obtenidos);
+      console.log("Cantidad de Premios: " + cantidad_De_Premios);  */
+
+
+
+      const obj = new Director({ nombre: nombre_del_Director, nacionalidad: nacionalidad_del_Director, premios: premios_Obtenidos, cantidad: cantidad_De_Premios });
+      /* console.log(obj); */
+
+
+
+      arreglo.push(obj);
+
+      console.log(arreglo);
+
+      form.reset();
+
+    }
+
+  </script>
+  <!-- <script src="./index.js" type=""></script> -->
+
+</body>
+
+</html>

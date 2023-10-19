@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./actores.css" />
+</head>
+
+
+<body>
+
+  <div class="container_general">
+
+    <div class="container-registro">
+
+      <h2>FORMULARIO DE REGISTRO DE ACTORES</h2>
+
+      <form name="form" method="get" action="">
+
+        <div class="nombre_Protagonista">
+          <label for="nombre">Nombre del Actor</label>
+          <input type="text" name="nombre" id="nombre" value="" placeholder="Ingrese el Nombre del Actor" />
+        </div>
+
+        <div class="nacionalidad">
+          <label for="nacionalidad">Nacionalidad</label>
+          <input type="text" name="nacionalidad" id="nacionalidad" value="" placeholder="Ingrese la Nacionalidad del Actor" />
+        </div>
+
+        <div class="premios">
+          <label for="premios">Ingrese el nombre de los Premios Recibidos</label>
+          <input type="text" name="premios" id="premios" value="" placeholder="Ingrese el nombre del Premio" />
+        </div>
+
+        <div class="cantidad">
+          <label for="cantidad_de_premios">Cantidad de Peliculas en las que ha participado</label>
+          <input type="number" name="cantidad" id="cantidad" value=""
+            placeholder="Ingrese la cantidad" />
+        </div>
+
+        <input type="button" value="REGISTRAR" onClick="prueba(this.form)" class="registrar" />
+      </form>
+    </div>
+
+    <div class="anterior-posterior">
+
+      <div class="ir_a_director">
+        <a href="http://127.0.0.1:5500/director.html" target="_blank">IR AL REGISTRO DE DIRECTORES</a>
+      </div>
+
+      <div class="ir_a_registro_peliculas">
+        <a href="http://127.0.0.1:5500/pelicula.html" target="_blank">IR AL REGISTRO DE PELICULAS</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+
+    const arreglo = [];
+
+    class Protagonista {
+      constructor({
+        nombre,
+        nacionalidad,
+        premios,
+        cantidad,
+      }) {
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        this.premios = premios;
+        this.cantidad = cantidad;
+      }
+    }
+
+    function prueba(form) {
+      var nombreProtagonista = form.nombre.value;
+      var nacionalidadProtagonista = form.nacionalidad.value;
+      var premiosObtenidos = form.premios.value;
+      var cantidadDePremios = form.cantidad.value;
+
+      /* console.log("Nombre del Protagonista: " + nombreProtagonista); 
+      console.log("Nacionalidad: " + nacionalidadProtagonista);
+      console.log("Nombre del Premio: " + premiosObtenidos);
+      console.log("Cantidad de Premios: " +cantidadDePremios);  */
+
+
+
+      const obj = new Protagonista({ nombre: nombreProtagonista, nacionalidad: nacionalidadProtagonista, premios: premiosObtenidos, cantidad: cantidadDePremios });
+      /* console.log(obj); */
+
+
+
+      arreglo.push(obj);
+
+      console.log(arreglo);
+
+      form.reset();
+
+    }
+
+
+
+  </script>
+  <!-- <script src="./index.js" type=""></script> -->
+
+</body>
+
+</html>
